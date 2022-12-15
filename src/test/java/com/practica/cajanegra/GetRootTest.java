@@ -17,21 +17,26 @@ Clases no aceptables -> Árbol sin capas (imposible probar ya que no se puede in
  */
 
 public class GetRootTest {
+	
 	private BinaryTree<String> binaryTree;
 	String nombre = "Test1";
 	
+	@BeforeEach
+	void setUp() throws Exception {
+		
+		binaryTree = new BinaryTree<String>(nombre);		
+	}
 		
 	@Test
 	@DisplayName ("V1. Permite nombre alfanumerico sin hijos")
 	public void getRoottestV1() {
-		binaryTree = new BinaryTree<String>(nombre);
+		
 		assertEquals(nombre, binaryTree.getRoot().getContent());
 	}
 	
 	@Test
 	@DisplayName ("V2. Permite nombre alfanumerico con hijos")
 	public void getRoottestV2() {
-		binaryTree = new BinaryTree<String>(nombre);
 		
 		Node<String> nodo1 = new Node<String>("2");
 		Node<String> nodo2 = new Node<String>("3");

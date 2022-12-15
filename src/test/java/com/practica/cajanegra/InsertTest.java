@@ -15,6 +15,7 @@ Clases aceptables -> Insertar nodo a la izquierda de uno que no tenga hijo a la 
  */
 
 class InsertTest {
+	
 	private BinaryTree<String> binaryTree;
 	
 	String nombre = "Test1";
@@ -29,22 +30,28 @@ class InsertTest {
 	@Test
 	@DisplayName ("V1. Permite insertar nodo a la derecha")
 	void InsertTestV1() {
+		
 		binaryTree.insert(nombre2, binaryTree.getRoot(), false);
+		
 		assertEquals(nombre2, binaryTree.search(nombre2).getContent());
 	}
 	
 	@Test
 	@DisplayName ("V2. Permite insertar nodo a la izquierda")
 	void InsertTestV2() {
+		
 		binaryTree.insert(nombre3, binaryTree.getRoot(), true);
+		
 		assertEquals(nombre3, binaryTree.search(nombre3).getContent());
 	}
 	
 	@Test
 	@DisplayName ("V3. Permite insertar nodo de profundidad 2")
 	void InsertTestV3() {
+		
 		binaryTree.insert(nombre2, binaryTree.getRoot(), true);
 		binaryTree.insert(nombre3, binaryTree.search(nombre2), true);
+		
 		assertEquals(nombre3, binaryTree.search(nombre3).getContent());
 	}
 

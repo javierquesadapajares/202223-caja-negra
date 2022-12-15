@@ -16,23 +16,28 @@ Clases no aceptables ->	Comparar árbol con otro con nodos de distinto contenido
  */
 
 class EqualsTest {
+	
 	private BinaryTree<String> binaryTree;
 
 	@BeforeEach
 	void setUp() throws Exception {
+		
 		binaryTree = new BinaryTree<String>("1");
 	}
 
 	@Test
 	@DisplayName ("V1. Compara un arbol con otro con solo raiz")
 	void equalstestV1() {
+		
 		BinaryTree<String> binaryTree2 = new BinaryTree<String>("1");
+		
 		assertTrue(binaryTree.equals(binaryTree2));
 	}
 	
 	@Test
 	@DisplayName ("V2. Compara un arbol con otro con hijos")
 	void equalstestV2() {
+		
 		BinaryTree<String> binaryTree2 = new BinaryTree<String>("1");
 		
 		binaryTree.insert("2", binaryTree.getRoot(), false);
@@ -47,6 +52,7 @@ class EqualsTest {
 	@Test
 	@DisplayName ("V3. Compara un arbol con otro con distinta profundidad/tamanio (subarbol)")
 	void equalstestV3() {
+		
 		BinaryTree<String> binaryTree2 = new BinaryTree<String>("1");
 		
 		binaryTree.insert("2", binaryTree.getRoot(), false);
