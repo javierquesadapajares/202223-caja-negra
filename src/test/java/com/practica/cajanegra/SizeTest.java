@@ -14,7 +14,13 @@ class SizeTest {
 	String nombre2 = "Test2";
 	String nombre3 = "Test3";
 	
-	
+	/*
+    Clases aceptables -> Árbol con capas solo a la izquierda,
+                         árbol con capas solo a la derecha,
+                         árbol con capas a los dos lados,
+                         árbol con un solo nodo.
+    Clases no aceptables -> Árbol sin nodos (imposible probar ya que no se puede instanciar un árbol sin nodo).
+     */
 
 	@BeforeEach
 	void setUp() throws Exception {

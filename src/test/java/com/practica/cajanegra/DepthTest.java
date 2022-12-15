@@ -8,6 +8,12 @@ import org.junit.jupiter.api.DisplayName;
 
 import com.binarytree.*;
 
+/*
+Clases aceptables -> Árbol con un solo nodo,
+                     árbol con dos o más nodos,
+                     desde un nodo que se encuentra en el árbol.
+ */
+
 public class DepthTest {
     private BinaryTree<String> binaryTree;
     String nombre = "Test1", apellido1 = "Test2", apellido2="Test3";
@@ -24,7 +30,7 @@ public class DepthTest {
 
     }
     @Test
-    @DisplayName("V2. Comprueba que la profundidad es 1 cuando hay un hijo o mas en la misma profundidad")
+    @DisplayName("V2. Comprueba que la profundidad es 1 cuando hay un hijo o más en la misma profundidad")
     public void depthV2() {
         binaryTree.insert(apellido1,binaryTree.getRoot(), false);
         assertEquals(1, binaryTree.depth());
