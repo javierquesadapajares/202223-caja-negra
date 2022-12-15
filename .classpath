@@ -23,6 +23,6 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="E:/UPM/Cuarto_anio/Primer_trimestre/VV/Practicas/PracticaCajaNegra/202223-caja-negra/binarytree.jar"/>
+	<classpathentry kind="lib" path="C:/Users/charl/OneDrive/Escritorio/202223-caja-negra/binarytree.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
