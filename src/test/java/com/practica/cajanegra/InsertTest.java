@@ -21,6 +21,7 @@ class InsertTest {
 	String nombre = "Test1";
 	String nombre2 = "Test2";
 	String nombre3 = "Test3";
+	String nombre4 = "Test4";
 	
 	@BeforeEach
 	void setUp() throws Exception {
@@ -53,6 +54,20 @@ class InsertTest {
 		binaryTree.insert(nombre3, binaryTree.search(nombre2), true);
 		
 		assertEquals(nombre3, binaryTree.search(nombre3).getContent());
+	}
+	
+	
+	@Test
+	@DisplayName ("V4. Si se inserta en un nodo intermedio (que ya tiene un valor previo), se sobreescribirá el contenido"
+			+ "y los nodos hijos del nodo intermedio original desaparecerán")
+	void InsertTestV4() {
+		
+		binaryTree.insert(nombre2, binaryTree.getRoot(), true);
+		binaryTree.insert(nombre3, binaryTree.search(nombre2), true);
+		
+		binaryTree.insert(nombre4, binaryTree.getRoot(), true);
+		
+		assertEquals("[Test1, Test4]", binaryTree.toList().toString());
 	}
 
 }
